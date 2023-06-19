@@ -33,6 +33,11 @@
         <% end %>
       </li>
       <li class="nav-item">
+        <%= link_to users_path, class:"nav-link text-light" do %>
+        <i class="fa-solid fa-users"></i>Users
+    <% end %>
+    </li>
+      <li class="nav-item">
         <%= link_to books_path, class:"nav-link text-light" do %>
         <i class="fa-solid fa-book-open"></i>Books
     <% end %>
@@ -44,10 +49,15 @@
     </li>
     <% else %>
      <li class="nav-item">
-        <%= link_to class:"nav-link text-light" do %>
+        <%= link_to root_path, class:"nav-link text-light" do%>
         <i class="fa-solid fa-house-chimney"></i>Home
         <% end %>
       </li>
+     <li class="nav-item">
+       <%= link_to about_path, class: "nav-link text-light" do %>
+       <i class="fa-solid fa-link"></i>About
+    <% end %>
+    </li>
         <li class="nav-item">
         <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
         <i class="fa-solid fa-user-plus"></i>Sign up
@@ -63,9 +73,12 @@
       </div>
         </div>
     </nav>
+    <div>
+  <%= flash[:notice] %>
+     </div>
   </header>
     <%= yield %>
-  </body>
+
   <footer>
    <div class="container mt-5">
     <div class="row">
@@ -75,4 +88,5 @@
     </div>
     </div>
   </footer>
+  </body>
 </html>

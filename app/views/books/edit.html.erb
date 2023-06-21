@@ -19,13 +19,13 @@
   <%= f.text_area :body,class:"form-control" %>
 	</div>
 	<div class="form-group">
-  <%= f.submit 'Updete Book',class:"btn btn-success" %>
+  <%= f.submit "Update Book",class:"btn btn-success" %>
   </div>
   <% end %>
 <br><%= link_to book_path(@book.id), class:"book.show" do %>
     Show
 <% end %> |
-<%= link_to books_path(@book.id), class:"book.back" do %>
+<%= link_to books_path, class:"book.back" do %>
     Back
 <% end %>
 </div>
